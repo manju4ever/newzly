@@ -1,0 +1,22 @@
+/*.remove-padding {
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}*/
+
+.history-area{
+	height:100vh !important;
+	overflow:auto;
+}
+
+.brand-heading {
+	padding:0.35rem !important;
+	margin-left:0.70rem !important;
+	margin-top:0.30rem !important;
+}
+
+.pseudo-btn {
+	cursor:pointer !important;
+}
+.news-feed {
+	min-height:200px;
+}
