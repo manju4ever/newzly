@@ -21,7 +21,7 @@ class NewsFeed extends Component {
                 return (
                     <div key={idx} className="item">
                         <div className="ui small image">
-                            <img src={eachFeed.thread.main_image!==null ? eachFeed.thread.main_image : "https://placeholdit.imgix.net/~text?txtsize=33&txt=No%20image&w=150&h=150"} />
+                            <img src={(eachFeed.thread.main_image!==null && eachFeed.thread.main_image!=='' && eachFeed.thread.main_image!==undefined) ? eachFeed.thread.main_image : "https://placeholdit.imgix.net/~text?txtsize=33&txt=No%20image&w=150&h=150"} />
                         </div>
                         <div className="content">
                             <div className="header">
