@@ -6,11 +6,11 @@ module.exports = {
 	},
 
 	devServer:{
-		cosntentBase:"static",
+		cosntentBase:"./",
 		inline:true,
 		watch:true,
 		port:8181,
-		publicPath:"dist/"
+		publicPath:"/dist/"
 
 	},
 

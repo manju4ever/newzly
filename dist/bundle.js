@@ -23711,7 +23711,7 @@
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "ui small image" },
-	                        _react2.default.createElement("img", { className: "no-image", src: eachFeed.thread.main_image })
+	                        _react2.default.createElement("img", { src: eachFeed.thread.main_image !== null ? eachFeed.thread.main_image : "https://placeholdit.imgix.net/~text?txtsize=33&txt=No%20image&w=150&h=150" })
 	                    ),
 	                    _react2.default.createElement(
 	                        "div",
