@@ -20,7 +20,6 @@ export default class SearchBar extends Component {
 		super(props);
 		this.addSearchKeyWord = this.addSearchKeyWord.bind(this);
 		this.removeSearchKeyword = this.removeSearchKeyword.bind(this);
-		//this.getNewsFor = this.getNewsFor.bind(this);
 		this.state ={
 			keywords:[],
 			selected_keyword_id:0

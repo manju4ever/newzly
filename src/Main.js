@@ -33,6 +33,10 @@ class Main extends Component {
 
 	getNewsFor(keyword) {
 		let that = this;
+		this.setState({
+			search_result:[],
+			loading_state: true
+		})
 		NewsSearchApi.getFeedFor(keyword).then(function(response) {
 			that.setState({
 				search_result: response.data.posts,

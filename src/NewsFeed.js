@@ -9,10 +9,14 @@ class NewsFeed extends Component {
 
     componentWillReceiveProps(nextProps) {
         console.log("Will Recieve Props - Feed");
-        let loaded_class = "ui segment raised news-feed";
+        let loaded_class = "ui segment raised news-feed",
+            loading_class = "ui loading segment raised news-feed";
+
         if(!nextProps.loading) {
               this.refs.feeds_view_ref.className =  loaded_class;
-        } 
+        }else {
+                this.refs.feeds_view_ref.className = loading_class;
+        }
     }
 
     render() {

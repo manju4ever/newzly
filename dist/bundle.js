@@ -121,6 +121,10 @@
 			key: "getNewsFor",
 			value: function getNewsFor(keyword) {
 				var that = this;
+				this.setState({
+					search_result: [],
+					loading_state: true
+				});
 				_NewsSearchApi2.default.getFeedFor(keyword).then(function (response) {
 					that.setState({
 						search_result: response.data.posts,
@@ -21768,7 +21772,6 @@
 
 			_this.addSearchKeyWord = _this.addSearchKeyWord.bind(_this);
 			_this.removeSearchKeyword = _this.removeSearchKeyword.bind(_this);
-			//this.getNewsFor = this.getNewsFor.bind(this);
 			_this.state = {
 				keywords: [],
 				selected_keyword_id: 0
@@ -23695,9 +23698,13 @@
 	        key: "componentWillReceiveProps",
 	        value: function componentWillReceiveProps(nextProps) {
 	            console.log("Will Recieve Props - Feed");
-	            var loaded_class = "ui segment raised news-feed";
+	            var loaded_class = "ui segment raised news-feed",
+	                loading_class = "ui loading segment raised news-feed";
+
 	            if (!nextProps.loading) {
 	                this.refs.feeds_view_ref.className = loaded_class;
+	            } else {
+	                this.refs.feeds_view_ref.className = loading_class;
 	            }
 	        }
 	    }, {
@@ -23711,7 +23718,7 @@
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "ui small image" },
-	                        _react2.default.createElement("img", { src: eachFeed.thread.main_image !== null ? eachFeed.thread.main_image : "https://placeholdit.imgix.net/~text?txtsize=33&txt=No%20image&w=150&h=150" })
+	                        _react2.default.createElement("img", { src: eachFeed.thread.main_image == null || eachFeed.thread.main_image == "" || eachFeed.thread.main_image == undefined ? "https://placeholdit.imgix.net/~text?txtsize=33&txt=No%20image&w=150&h=150" : eachFeed.thread.main_image })
 	                    ),
 	                    _react2.default.createElement(
 	                        "div",
