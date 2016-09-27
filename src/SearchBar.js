@@ -47,7 +47,7 @@ export default class SearchBar extends Component {
 
 
 	addSearchKeyWord(ev) {
-		console.log("Add Search Keyword Triggered");
+		//console.log("Add Search Keyword Triggered");
 		this.setState({
 			keywords:this.state.keywords.concat([this.refs.keyword.value])
 		});
@@ -77,7 +77,7 @@ export default class SearchBar extends Component {
 
 	render() {
 
-		console.log("Rendered Search")
+		//console.log("Rendered Search")
 
 		let saved_list = this.state.keywords.map((eachKeyword, idx) => {
 			return (

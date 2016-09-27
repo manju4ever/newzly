@@ -8,7 +8,7 @@ class NewsFeed extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log("Will Recieve Props - Feed");
+        //console.log("Will Recieve Props - Feed");
         let loaded_class = "ui segment raised news-feed",
             loading_class = "ui loading segment raised news-feed";
 
