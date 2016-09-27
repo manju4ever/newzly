@@ -1,4 +1,3 @@
-import App from "./App.js";
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import SearchBar from "./SearchBar.js";
