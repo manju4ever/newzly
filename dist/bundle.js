@@ -21619,7 +21619,7 @@
 		}, {
 			key: "addSearchKeyWord",
 			value: function addSearchKeyWord(ev) {
-				console.log("Add Search Keyword Triggered");
+				//console.log("Add Search Keyword Triggered");
 				this.setState({
 					keywords: this.state.keywords.concat([this.refs.keyword.value])
 				});
@@ -21651,7 +21651,7 @@
 			value: function render() {
 				var _this2 = this;
 
-				console.log("Rendered Search");
+				//console.log("Rendered Search")
 
 				var saved_list = this.state.keywords.map(function (eachKeyword, idx) {
 					return _react2.default.createElement(
@@ -23514,7 +23514,7 @@
 	    _createClass(NewsFeed, [{
 	        key: "componentWillReceiveProps",
 	        value: function componentWillReceiveProps(nextProps) {
-	            console.log("Will Recieve Props - Feed");
+	            //console.log("Will Recieve Props - Feed");
 	            var loaded_class = "ui segment raised news-feed",
 	                loading_class = "ui loading segment raised news-feed";
 
