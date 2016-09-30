@@ -42,7 +42,7 @@ class NewsFeed extends Component {
                             </div>
 
                             <div className="meta">
-                                Published {this.relativeTimeDifference(eachFeed.thread.published)} ago
+                                <i className="icon clock"></i> {this.relativeTimeDifference(eachFeed.thread.published)} ago
                             </div>
   
 

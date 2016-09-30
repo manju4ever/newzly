@@ -23561,7 +23561,8 @@
 	                        _react2.default.createElement(
 	                            "div",
 	                            { className: "meta" },
-	                            "Published ",
+	                            _react2.default.createElement("i", { className: "icon clock" }),
+	                            " ",
 	                            _this2.relativeTimeDifference(eachFeed.thread.published),
 	                            " ago"
 	                        ),
