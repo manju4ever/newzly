@@ -2,6 +2,6 @@ import Axios from "axios";
 
 module.exports =  {
 	getFeedFor: function(searchKey) {
-		return Axios.get("https://webhose.io/search?token=5a846987-752c-4529-8762-ac63e7b99ffb&size=10&q="+searchKey);
+		return Axios.get("https://webhose.io/search?token=c5e60f7d-d0f1-4072-94a3-6bc8f2808683b&size=10&q="+searchKey);
 	}
 };
