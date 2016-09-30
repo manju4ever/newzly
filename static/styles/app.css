@@ -20,3 +20,10 @@
 .news-feed {
 	min-height:200px;
 }
+
+.feed-date {
+	float:right !important;
+	font-size:16px !important;
+	font-style:italic !important;
+	font-family: inherit;
+}

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import moment from "moment";
 
 class NewsFeed extends Component {
    
@@ -19,6 +20,13 @@ class NewsFeed extends Component {
         }
     }
 
+    relativeTimeDifference(future) {
+         let now = moment(),
+             then = moment(future),
+             duration = moment.duration(now.diff(then));
+         return duration.humanize();
+    }
+
     render() {
             
             let feeds_view = this.props.feeds.map((eachFeed, idx) => {
@@ -29,8 +37,15 @@ class NewsFeed extends Component {
                         </div>
                         <div className="content">
                             <div className="header">
-                                {eachFeed.thread.title}
+                                {eachFeed.thread.title} 
+                               
                             </div>
+
+                            <div className="meta">
+                                Published {this.relativeTimeDifference(eachFeed.thread.published)} ago
+                            </div>
+  
+
                             <div className="description">
                                 {eachFeed.thread.title}
                                 {eachFeed.thread.text}
@@ -40,6 +55,7 @@ class NewsFeed extends Component {
                                 <a className="ui button basic red" href={eachFeed.thread.url} target="_blank"> 
                                     Read More
                                 </a>
+                               
                             </div>
                         </div>  
                     </div>                
