@@ -38037,7 +38037,7 @@
 
 	module.exports = {
 		getFeedFor: function getFeedFor(searchKey) {
-			return _axios2.default.get("https://webhose.io/search?token=c5e60f7d-d0f1-4072-94a3-6bc8f2808683&size=10&q=" + searchKey);
+			return _axios2.default.get("https://webhose.io/search?token=c5e60f7d-d0f1-4072-94a3-6bc8f2808683&size=10&performance_score=5&q=" + searchKey);
 		}
 	};
 
